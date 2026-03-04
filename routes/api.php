@@ -1,15 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
-
-Route::get('/', function() {
+Route::get('/', function () {
     return response()->json([
-        'code' => 200,
-        'message' => 'hola'
+        'api' => 'tfg-api',
+        'version' => 'v1',
+        'status' => 'ok'
     ]);
 });
