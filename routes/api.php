@@ -60,7 +60,7 @@ Route::prefix('v1')->group(function () {
         Route::patch('/notifications/{notification}/read', [NotificationController::class, 'markAsRead']);
 
         // ==========================================
-        // ADMIN / EMPLOYEE ROUTES
+        // RUTAS ADMIN/EMPLEADO
         // ==========================================
         // Quizas estaria bien aprender a crear un middleware para comprobar si es admin/empleado
         Route::prefix('admin')->group(function () {
