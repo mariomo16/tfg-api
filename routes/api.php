@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/status', function () {
     return response()->json([
         'api' => 'tfg-api',
         'version' => 'v1',
