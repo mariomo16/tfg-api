@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/status', function () {
+// Para el componente health de Angular
+Route::get('/up', function () {
     return response()->json([
-        'status' => 'ok',
-        'timestamp' => now()
+        'status' => 'up',
+        'time' => round((microtime(true) - LARAVEL_START) * 1000),
     ]);
 });
 
