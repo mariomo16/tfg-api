@@ -16,11 +16,11 @@ class ZoneFactory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->randomElement(['standard', 'gaming', 'office']);
+        $name = $this->faker->randomElement(['Zona Gaming', 'Zona Torneo', 'Zona VIP']);
         $pricePerSlot = match ($name) {
-            'standard' => 4,
-            'gaming' => 7,
-            'office' => 2,
+            'Zona Gaming' => 2.5,
+            'Zona Torneo' => 3.5,
+            'Zona VIP' => 5,
         };
 
         return [

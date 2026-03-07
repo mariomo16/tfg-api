@@ -1,16 +1,18 @@
 <?php
 
+use App\Http\Controllers\V1\ComputerController;
+use App\Http\Controllers\V1\ZoneController;
 use Illuminate\Support\Facades\Route;
 
-// Para el componente health de Angular
-Route::get('/up', function () {
-    return response()->json([
-        'status' => 'up',
-        'time' => round((microtime(true) - LARAVEL_START) * 1000),
-    ]);
-});
-
 Route::prefix('v1')->group(function () {
+
+    // Para el componente health de Angular
+    Route::get('/status', function () {
+        return response()->json([
+            'status' => 'up',
+            'time' => round((microtime(true) - LARAVEL_START) * 1000),
+        ]);
+    });
 
     // ==========================================
     // AUTENTICACIÓN

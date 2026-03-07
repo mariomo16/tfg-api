@@ -21,10 +21,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
-        Zone::factory(3)->create();
+        $zones = ['Zona Gaming', 'Zona Torneo', 'Zona VIP'];
+        foreach ($zones as $name) {
+            Zone::create([
+                'name' => $name,
+                'price_per_slot' => match ($name) {
+                    'Zona Gaming' => 2.5,
+                    'Zona Torneo' => 3.5,
+                    'Zona VIP' => 5.0
+                },
+            ]);
+        }
         Computer::factory(15)->create();
         TimeSlot::factory(14)->create();
+        User::factory(10)->create();
         Reservation::factory(20)->create();
         Payment::factory(15)->create();
         Notification::factory(10)->create();
