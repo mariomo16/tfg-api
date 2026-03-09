@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\TimeSlotController;
+use App\Http\Controllers\V1\AuthController;
 use App\Http\Controllers\V1\ComputerController;
 use App\Http\Controllers\V1\ZoneController;
 use Illuminate\Support\Facades\Route;
