@@ -19,7 +19,7 @@ return [
 
   'allowed_methods' => ['*'],
 
-  'allowed_origins' => ['http://localhost:4200', 'https://ortegamario-tfg.vercel.app'],
+  'allowed_origins' => ['http://localhost:4200', 'ortegamario-tfg-web.vercel.app'],
 
   'allowed_origins_patterns' => [],
 
