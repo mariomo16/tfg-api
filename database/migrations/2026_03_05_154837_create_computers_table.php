@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->string('name');
             $table->enum('status', ['available', 'maintenance', 'occupied']);
             $table->text('specs')->nullable();
+            $table->softDeletes();
         });
     }
 

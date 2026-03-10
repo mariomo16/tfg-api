@@ -42,7 +42,7 @@ Route::prefix('v1')->group(function () {
     // ==========================================
     // RUTAS PROTEGIDAS
     // ==========================================
-    Route::middleware('auth:sanctum')->group(function () {
+    // Route::middleware('auth:sanctum')->group(function () {
 
         // --- CUENTA DE USUARIO ---
         Route::get('/user', [AuthController::class, 'user']);
@@ -85,5 +85,5 @@ Route::prefix('v1')->group(function () {
             Route::apiResource('payments', PaymentController::class)->except(['show']);
             Route::apiResource('notifications', NotificationController::class)->except(['show']);
         });
-    });
+    // });
 });
