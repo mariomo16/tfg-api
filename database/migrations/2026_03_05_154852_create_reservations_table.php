@@ -22,6 +22,7 @@ return new class extends Migration {
             $table->enum('status', ['confirmed', 'cancelled']);
             $table->decimal('total_price', 5, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

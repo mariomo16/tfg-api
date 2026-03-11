@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id()->autoIncrement();
             $table->time('start_time');
             $table->time('end_time');
+            $table->softDeletes();
         });
     }
 

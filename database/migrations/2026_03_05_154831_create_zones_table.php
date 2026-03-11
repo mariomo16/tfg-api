@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->decimal('price_per_slot', 4, 2);
+            $table->softDeletes();
         });
     }
 

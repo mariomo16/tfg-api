@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->decimal('amount', 5, 2);
             $table->enum('type', ['payment', 'refund']);
             $table->timestamp('created_at')->useCurrent();
+            $table->softDeletes();
         });
     }
 
