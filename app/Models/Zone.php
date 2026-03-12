@@ -13,7 +13,7 @@ class Zone extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [];
+    protected $fillable = ['name', 'price_per_slot'];
 
     public function computers()
     {

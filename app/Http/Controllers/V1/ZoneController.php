@@ -15,17 +15,19 @@ class ZoneController extends Controller
 
     public function store(Request $request)
     {
-        Zone::create($request->all()); // TODO: Hacer FormRequest
+        $zone = Zone::create($request->all()); // TODO: Hacer FormRequest
+        return response()->json($zone->load('computers'));
     }
 
     public function show(Zone $zone)
     {
-        return response()->json(Zone::find($zone->id)->with('computers'));
+        return response()->json($zone->load('computers'));
     }
 
     public function update(Request $request, Zone $zone)
     {
         $zone->update($request->all()); // TODO: Hacer FormRequest
+        return response()->json($zone->fresh()->load('computers'));
     }
 
     public function destroy(Zone $zone)
