@@ -13,7 +13,7 @@ class Computer extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [];
+    protected $fillable = ['name', 'zone_id', 'status', 'specs'];
 
     public function zone()
     {

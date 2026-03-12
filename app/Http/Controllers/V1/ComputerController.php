@@ -15,17 +15,19 @@ class ComputerController extends Controller
 
     public function store(Request $request)
     {
-        Computer::create($request->all()); // TODO: Hacer FormRequest
+        $computer = Computer::create($request->all()); // TODO: Hacer FormRequest
+        return response()->json($computer->load(['zone', 'reservations']));
     }
 
     public function show(Computer $computer)
     {
-        return response()->json(Computer::find($computer->id)->with(['zone', 'reservations']));
+        return response()->json($computer->load(['zone', 'reservations']));
     }
 
     public function update(Request $request, Computer $computer)
     {
         $computer->update($request->all()); // TODO: Hacer FormRequest
+        return response()->json($computer->fresh()->load(['zone', 'reservations']));
     }
 
     public function destroy(Computer $computer)
