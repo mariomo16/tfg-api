@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\PaymentController;
-use App\Http\Controllers\ReservationController;
-use App\Http\Controllers\TimeSlotController;
+use App\Http\Controllers\v1\NotificationController;
+use App\Http\Controllers\v1\PaymentController;
+use App\Http\Controllers\v1\ReservationController;
+use App\Http\Controllers\v1\TimeSlotController;
 use App\Http\Controllers\V1\AuthController;
 use App\Http\Controllers\V1\ComputerController;
 use App\Http\Controllers\V1\ZoneController;

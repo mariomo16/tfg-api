@@ -6,7 +6,7 @@ use App\Models\TimeSlot;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ZoneController extends Controller
+class TimeSlotController extends Controller
 {
     public function index()
     {
