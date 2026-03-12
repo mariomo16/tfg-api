@@ -13,6 +13,8 @@ class TimeSlot extends Model
 
     public $timestamps = false;
 
+    protected $fillable = ['start_time', 'end_time'];
+
     public function reservations()
     {
         return $this->hasMany(Reservation::class);
